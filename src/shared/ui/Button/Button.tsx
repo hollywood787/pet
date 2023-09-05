@@ -11,8 +11,8 @@ type ButtonsProps = {
 	theme?: ThemeButton;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: FC<ButtonsProps> = (props) => {
-	const {className, children, theme, ...otherProps} = props;
+export const Button: FC<ButtonsProps> = props => {
+	const {className = '', children, theme = 'clear', ...otherProps} = props;
 	return (
 		<button
 			type='button'
@@ -23,4 +23,3 @@ export const Button: FC<ButtonsProps> = (props) => {
 		</button>
 	);
 };
-

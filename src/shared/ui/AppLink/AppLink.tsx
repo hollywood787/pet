@@ -13,8 +13,14 @@ type AppLinkProps = {
 	theme?: AppLinkTheme;
 } & LinkProps;
 
-export const AppLink: FC<AppLinkProps> = (props) => {
-	const {to, className, children, theme = AppLinkTheme.PRIMARY, ...otherProps} = props;
+export const AppLink: FC<AppLinkProps> = props => {
+	const {
+		to,
+		className = '',
+		children,
+		theme = AppLinkTheme.PRIMARY,
+		...otherProps
+	} = props;
 
 	return (
 		<Link
@@ -26,4 +32,3 @@ export const AppLink: FC<AppLinkProps> = (props) => {
 		</Link>
 	);
 };
-
