@@ -1,7 +1,7 @@
 import {classNames} from './classNames';
 
 describe('classNames', () => {
-	test('with only frist parap', () => {
+	test('with only frist param', () => {
 		expect(classNames('someClass')).toBe('someClass');
 	});
 
